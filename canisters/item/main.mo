@@ -4,6 +4,8 @@ import List "mo:base/List";
 import Option "mo:base/Option";
 import Nat "mo:base/Nat";
 import Iter "mo:base/Iter";
+import Error "mo:base/Error";
+import Result "mo:base/Result";
 actor {
 
     public type Item = {
@@ -11,6 +13,9 @@ actor {
         id : Nat;
         price : Float
     };
+
+    public type GenercError = { #notFound };
+
 
     private stable var nextItemId : Nat = 1;
 
@@ -31,5 +36,16 @@ actor {
     public shared query func getAllItems() : async [Item] {
         return Iter.toArray<Item>(items.vals())
     };
+
+    public query func getSingleItem(id : Text) : async Result.Result<Item, GenercError> {
+        switch (items.get(id)) {
+            case null { 
+                #err(#notFound)
+            };
+            case (?item) {
+                #ok(item);
+            }
+        }
+    }
 
 }

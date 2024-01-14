@@ -10,7 +10,8 @@
     },
     "assets": {
       "dependencies": [
-        "counter"
+        "counter",
+        "item"
       ],
       "frontend": {
         "entrypoint": "dist/index.html"

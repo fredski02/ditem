@@ -8,11 +8,13 @@ import "@connect2ic/core/style.css"
 
 // import canisters
 import * as counter from "../.dfx/local/canisters/counter"
+import * as item from "../.dfx/local/canisters/item"
 
 // create a client
 const client = createClient({
   canisters: {
     counter,
+    item
   },
   providers: defaultProviders,
   globalProviderConfig: {

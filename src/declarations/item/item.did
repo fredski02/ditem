@@ -1,10 +1,17 @@
+type Result = 
+ variant {
+   err: GenercError;
+   ok: Item;
+ };
 type Item = 
  record {
    id: nat;
    name: text;
    price: float64;
  };
+type GenercError = variant {notFound;};
 service : {
   createItem: (text, float64) -> ();
   getAllItems: () -> (vec Item) query;
+  getSingleItem: (text) -> (Result) query;
 }
