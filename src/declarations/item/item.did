@@ -1,0 +1,10 @@
+type Item = 
+ record {
+   id: nat;
+   name: text;
+   price: float64;
+ };
+service : {
+  createItem: (text, float64) -> ();
+  getAllItems: () -> (vec Item) query;
+}
