@@ -4,6 +4,8 @@ import { createPinia } from 'pinia'
 import App from "./App.vue"
 import router from './routes'
 
+import 'primeicons/primeicons.css'
+
 import "./assets/css/index.css"
 import 'primevue/resources/themes/lara-light-green/theme.css'
 

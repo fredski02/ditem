@@ -1,7 +1,7 @@
 <template>
-    <div class="flex">
+    <div class="flex flex-row align-center items-center w-full justify-between pr-2 pl-4 py-2 bg-rose-400">
+        <strong>DItem</strong>
         <ConnectButton />
-        <Button>hey</Button>
     </div>
 </template>
 

@@ -11,6 +11,7 @@
     "@connect2ic/vue": "^0.1.1",
     "@dfinity/agent": "^0.11.3",
     "pinia": "^2.1.7",
+    "primeicons": "^6.0.1",
     "primevue": "^3.46.0",
     "vue": "^3.2.37",
     "vue-router": "^4.2.5"
